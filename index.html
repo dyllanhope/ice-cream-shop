@@ -40,17 +40,17 @@
         <div class='col-sm'></div>
     </div>
     <div style='margin-top:10px' class='row'>
-        <div class='col-1'></div>
-        <div class='col-10 mx-auto'>
+        <div class='col-sm'></div>
+        <div class='col-sm border rounded'>
             <h4>Toppings:</h4>
             {{#each toppings}}
-            <div class="custom-control custom-checkbox custom-control-inline">
+            <div  style='width:100%' class="custom-control custom-checkbox custom-control-inline">
                 <input type="checkbox" class="custom-control-input" name='toppingChoice' value='{{topping}}' id="{{ topping }}" onclick="addToppings()">
                 <label class="custom-control-label" for="{{ topping }}">{{topping}}</label>
             </div>
             {{/each}}
         </div>
-        <div class='col-1'></div>
+        <div class='col-sm'></div>
     </div>
     </script>
 
@@ -91,11 +91,11 @@
 
     <script type='text/template' class='totalTemplate'>
         <div class='row'>
-                <div class='col-4'></div>
-                <div class='col-4'>
+                <div class='col-sm'></div>
+                <div class='col-sm'>
                     <strong style='float:right; margin-top:15px'>Total: <span>R{{ total }}</span></strong>
                 </div>
-                <div class='col-4'></div>
+                <div class='col-sm'></div>
             </div>
     </script>
 
