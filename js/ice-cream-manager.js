@@ -35,18 +35,16 @@ const IceCreamManager = () => {
     const returnBasket = () => { return basket; };
 
     const addFlavour = (flavour) => {
-        for (let item of flavours) {
-            if (item.flavour === flavour) {
-                flavourCost = item.cost;
-            }
-        }
+        const priceOf = flavours.find((item)=>{
+            return item.flavour == flavour
+        });
+        flavourCost = priceOf.cost;
     };
     const addContainer = (container) => {
-        for (let item of containers) {
-            if (item.container === container) {
-                containerCost = item.cost;
-            }
-        }
+        const priceOf = containers.find((item)=>{
+            return item.container == container
+        });
+        containerCost = priceOf.cost;
     };
     const addToppings = (toppingList) => {
         toppingCost = 0;
