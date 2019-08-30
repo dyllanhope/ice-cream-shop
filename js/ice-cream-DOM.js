@@ -65,12 +65,17 @@ const enableButton = () => {
     if (flavourDrop.value != 'Flavour' && containerDrop.value != 'Container') {
         addToBasket.style.display = '';
     } else {
-        addToBasket.style.display = 'none';        
+        addToBasket.style.display = 'none';
     }
 }
 
 addToBasket.addEventListener('click', () => {
-    let item = { flavour: flavourDrop.value, container: containerDrop.value, toppings: list, total: iceCreamInstance.returnTotal() };
+    let item = {
+        flavour: flavourDrop.value,
+        container: containerDrop.value,
+        toppings: list,
+        total: iceCreamInstance.returnTotal()
+    };
     list = [];
     iceCreamInstance.addToBasket(item);
 });

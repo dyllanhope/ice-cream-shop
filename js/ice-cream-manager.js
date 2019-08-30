@@ -13,7 +13,6 @@ const IceCreamManager = () => {
         { container: 'Plain cone', cost: 5 },
         { container: 'Sugar cone', cost: 8 },
         { container: 'Paper cup', cost: 4 },
-
     ];
     const toppings = [
         { topping: 'Crumbled peanuts', cost: 6 },
