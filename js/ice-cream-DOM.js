@@ -79,7 +79,7 @@ addToBasket.addEventListener('click', () => {
     message.style.display = '';
     setTimeout(() => {
         message.style.display = 'none';
-    }, 3000);
+    }, 2500);
     let item = {
         flavour: flavourDrop.value,
         container: containerDrop.value,

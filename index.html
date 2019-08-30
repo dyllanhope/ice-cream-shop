@@ -42,6 +42,7 @@
     <div style='margin-top:10px' class='row'>
         <div class='col-1'></div>
         <div class='col-10 mx-auto'>
+            <h4>Toppings:</h4>
             {{#each toppings}}
             <div class="custom-control custom-checkbox custom-control-inline">
                 <input type="checkbox" class="custom-control-input" name='toppingChoice' value='{{topping}}' id="{{ topping }}" onclick="addToppings()">
@@ -120,10 +121,10 @@
         <div class='row'>
             <div class='col-4'></div>
             <div class='col-4'>
+                <button style='float:right' type="button" class="btn btn-primary addToBasket">Add to Basket</button><br><br>
                 <div class="alert alert-success message" role="alert">
-                    Ice cream added to your basket!
+                    Ice cream added!
                 </div>
-                <button style='float:right' type="button" class="btn btn-primary addToBasket">Add to Basket</button>
             </div>
             <div class='col-4'></div>
         </div>
