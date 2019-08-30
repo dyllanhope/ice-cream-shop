@@ -71,7 +71,7 @@ const IceCreamManager = () => {
         for (let item of basket) {
             total += Number(item.total);
         }
-        return total;
+        return total.toFixed(2);
     }
 
     const clear = () => {

@@ -92,20 +92,17 @@ addToBasket.addEventListener('click', () => {
 
 
 const loadTotal = (total) => {
-    console.log(total);
     totalDisplay = document.querySelector('.displayTotal');
+    totalDisplay.style.display = '';
 
     const HTML = totalTemplate({ total });
     totalDisplay.innerHTML = HTML;
 };
 
 const buildBasket = () => {
-    console.log('hi')
+    totalDisplay.style.display = 'none';
     const basketData = iceCreamInstance.returnBasket();
-    console.log(basketData);
-    const HTML = basketTemplate({ items: basketData });
+    const HTML = basketTemplate({ items: basketData, total: iceCreamInstance.returnBasketTotal() });
     displayData.innerHTML = HTML;
-
-    loadTotal(iceCreamInstance.returnBasketTotal());
 };
 

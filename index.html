@@ -55,7 +55,7 @@
 
     <script type='text/template' class='basketTemplate'>
         <div style='margin-top:15px' class='row'>
-            <table class="table table-primary">
+            <table class="table table-primary table-bordered">
                 <thead>
                   <tr>
                     <th scope="col">Flavour</th>
@@ -80,6 +80,10 @@
                         </tr>
                   {{/each}}
                 </tbody>
+                <tr>
+                    <td colspan="3"></td>
+                    <td><strong>Total: R{{ total }}</strong></td>
+                </tr>
             </table>
         </div>
     </script>
