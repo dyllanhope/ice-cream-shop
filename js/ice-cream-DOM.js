@@ -89,6 +89,7 @@ addToBasket.addEventListener('click', () => {
     };
     list = [];
     iceCreamInstance.addToBasket(item);
+    loadTotal(iceCreamInstance.returnTotal());
 });
 
 
@@ -96,7 +97,7 @@ const loadTotal = (total) => {
     totalDisplay = document.querySelector('.displayTotal');
     totalDisplay.style.display = '';
 
-    const HTML = totalTemplate({ total });
+    const HTML = totalTemplate({ total, count: iceCreamInstance.basketCounter() });
     totalDisplay.innerHTML = HTML;
 };
 

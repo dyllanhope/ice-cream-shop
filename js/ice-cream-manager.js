@@ -35,13 +35,13 @@ const IceCreamManager = () => {
     const returnBasket = () => { return basket; };
 
     const addFlavour = (flavour) => {
-        const priceOf = flavours.find((item)=>{
+        const priceOf = flavours.find((item) => {
             return item.flavour == flavour
         });
         flavourCost = priceOf.cost;
     };
     const addContainer = (container) => {
-        const priceOf = containers.find((item)=>{
+        const priceOf = containers.find((item) => {
             return item.container == container
         });
         containerCost = priceOf.cost;
@@ -72,6 +72,8 @@ const IceCreamManager = () => {
         return total.toFixed(2);
     }
 
+    const basketCounter = () => { return basket.length; };
+
     const clear = () => {
         flavourCost = 0;
         containerCost = 0;
@@ -90,6 +92,7 @@ const IceCreamManager = () => {
         clear,
         addToBasket,
         returnBasket,
-        returnBasketTotal
+        returnBasketTotal,
+        basketCounter
     }
 };
