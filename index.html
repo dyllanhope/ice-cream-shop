@@ -41,7 +41,7 @@
     </div>
     <div style='margin-top:10px' class='row'>
         <div class='col-sm'></div>
-        <div class='col-sm border rounded'>
+        <div style='background-color:white' class='col-sm border rounded'>
             <h4>Toppings:</h4>
             {{#each toppings}}
             <div  style='width:100%' class="custom-control custom-checkbox custom-control-inline">
@@ -93,7 +93,7 @@
         <div class='row'>
                 <div class='col-sm'></div>
                 <div class='col-sm'>
-                    <strong style='float:right; margin-top:15px'>Total: <span>R{{ total }}</span></strong>
+                    <strong style='float:right; margin-top:15px; background-color:white; border-radius:5px'>Total: <span>R{{ total }}</span></strong>
                 </div>
                 <div class='col-sm'></div>
             </div>
@@ -102,12 +102,12 @@
     <title>Ice-cream shop</title>
 </head>
 
-<body>
+<body background="./media/wallpaper.jpg">
     <div class='container'>
         <div class='row'>
             <div class='col-sm'></div>
             <div class='col-sm'>
-                <h1>Ice cream widget</h1>
+                <h1 style='color:white'>Ice cream widget</h1>
                 <button type="button" class="btn btn-primary displayOrder">Order ice cream</button>
                 <button type="button" class="btn btn-primary displayBasket">Basket</button>
             </div>
@@ -121,7 +121,7 @@
         <div class='row'>
             <div class='col-sm'></div>
             <div class='col-sm'>
-                <button style='float:right' type="button" class="btn btn-primary addToBasket">Add to Basket</button><br><br>
+                <button style='float:right;' type="button" class="btn btn-primary addToBasket">Add to Basket</button><br><br>
                 <div class="alert alert-success message" role="alert">
                     Ice cream added!
                 </div>
