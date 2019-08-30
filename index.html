@@ -20,8 +20,8 @@
 
     <script type='text/template' class='choicesTemplate'>
     <div class='row'>
-        <div class='col-4'></div>
-        <div class='col-4'>
+        <div class='col-sm'></div>
+        <div class='col-sm'>
             <div style='margin:10px'>
                 <select class="custom-select flavourDrop">
                     {{#each flavours}}
@@ -37,7 +37,7 @@
                 </select>
             </div>
         </div>
-        <div class='col-4'></div>
+        <div class='col-sm'></div>
     </div>
     <div style='margin-top:10px' class='row'>
         <div class='col-1'></div>
@@ -56,7 +56,7 @@
 
     <script type='text/template' class='basketTemplate'>
         <div style='margin-top:15px' class='row'>
-            <table class="table table-primary table-bordered">
+            <table class="table table-sm table-primary table-bordered">
                 <thead>
                   <tr>
                     <th scope="col">Flavour</th>
@@ -71,7 +71,7 @@
                             <td>{{flavour}}</td>
                             <td>{{container}}</td>
                             <td>
-                                <ul>
+                                <ul style='padding:0px; list-style-type: none'>
                                 {{#each toppings}}
                                     <li>{{this}}</li>
                                 {{/each}}
@@ -105,13 +105,13 @@
 <body>
     <div class='container'>
         <div class='row'>
-            <div class='col-4'></div>
-            <div class='col-4'>
-                <h1 class="display-3">Ice cream</h1>
+            <div class='col-sm'></div>
+            <div class='col-sm'>
+                <h1>Ice cream widget</h1>
                 <button type="button" class="btn btn-primary displayOrder">Order ice cream</button>
                 <button type="button" class="btn btn-primary displayBasket">Basket</button>
             </div>
-            <div class='col-4'></div>
+            <div class='col-sm'></div>
         </div>
         <div class='displayData'>
 

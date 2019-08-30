@@ -30,6 +30,7 @@ displayBasket.addEventListener('click', () => {
 });
 
 displayOrder.addEventListener('click', () => {
+    list = [];
     addToBasket.style.display = 'none';
     message.style.display = 'none';
     iceCreamInstance.clear();
@@ -100,7 +101,9 @@ const loadTotal = (total) => {
 };
 
 const buildBasket = () => {
+    totalDisplay = document.querySelector('.displayTotal');
     totalDisplay.style.display = 'none';
+
     const basketData = iceCreamInstance.returnBasket();
     const HTML = basketTemplate({ items: basketData, total: iceCreamInstance.returnBasketTotal() });
     displayData.innerHTML = HTML;
