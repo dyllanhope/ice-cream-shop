@@ -73,6 +73,7 @@ const IceCreamManager = () => {
     }
 
     const basketCounter = () => { return basket.length; };
+    
 
     const clear = () => {
         flavourCost = 0;
