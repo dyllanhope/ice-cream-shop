@@ -1,10 +1,13 @@
 const choiceTemplateSource = document.querySelector('.choicesTemplate').innerHTML;
 const totalTemplateSource = document.querySelector('.totalTemplate').innerHTML;
 const basketTemplateSource = document.querySelector('.basketTemplate').innerHTML;
+
 const choiceTemplate = Handlebars.compile(choiceTemplateSource);
 const totalTemplate = Handlebars.compile(totalTemplateSource);
 const basketTemplate = Handlebars.compile(basketTemplateSource);
+
 const addToBasket = document.querySelector('.addToBasket');
+const message = document.querySelector('.message');
 const toppingChoice = document.querySelectorAll('.toppingChoice');
 
 const displayData = document.querySelector('.displayData');
@@ -15,17 +18,20 @@ const iceCreamInstance = IceCreamManager();
 
 window.onload = () => {
     addToBasket.style.display = 'none';
+    message.style.display = 'none';
 };
 
 displayBasket.addEventListener('click', () => {
     iceCreamInstance.clear();
     displayData.innerHTML = '';
     addToBasket.style.display = 'none';
+    message.style.display = 'none';
     buildBasket();
 });
 
 displayOrder.addEventListener('click', () => {
     addToBasket.style.display = 'none';
+    message.style.display = 'none';
     iceCreamInstance.clear();
     const flavours = iceCreamInstance.flavoursList();
     const containers = iceCreamInstance.containersList();
@@ -70,6 +76,10 @@ const enableButton = () => {
 }
 
 addToBasket.addEventListener('click', () => {
+    message.style.display = '';
+    setTimeout(() => {
+        message.style.display = 'none';
+    }, 3000);
     let item = {
         flavour: flavourDrop.value,
         container: containerDrop.value,
