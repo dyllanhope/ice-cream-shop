@@ -69,7 +69,7 @@ describe('Ice cream manager tests', () => {
                 total: 38
             });
 
-            assert.deepEqual(instance.returnBasketTotal(), 58);
+            assert.equal(instance.returnBasketTotal(), 58.00);
         });
     });
     describe('Testing lists', () => {
